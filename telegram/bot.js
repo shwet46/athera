@@ -1,17 +1,74 @@
 const { Telegraf } = require('telegraf');
 const { handleMessage } = require('../nlu/handler');
+const { getUserTokens } = require('../utils/sessionStore');
+
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
 
+function escapeMarkdownV2(text) {
+  return text
+    .replace(/[_*[\]()~`>#+=|{}.!\\-]/g, '\\$&');
+}
+
 bot.start((ctx) => {
-  const loginUrl = `http://localhost:3000/oauth?telegram_id=${ctx.from.id}`;
-  ctx.reply(`👋 Welcome to Athera! To get started, please [Login with Google](${loginUrl})`, {
-    parse_mode: 'Markdown'
-  });
+  const userId = ctx.from.id;
+  const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+  const loginUrl = `${baseUrl}/oauth?telegram_id=${userId}`;
+  const escapedUrl = escapeMarkdownV2(loginUrl);
+
+  const message = escapeMarkdownV2(`
+👋 *Welcome to Athera!*  
+I'm your smart assistant for Google Calendar, Gmail, Drive & Docs.
+
+To get started:
+1. [Click this link to Login with Google](${loginUrl})
+2. Grant access to your Google Workspace account
+3. Come back and start asking questions like:
+   • Schedule a meeting at 3pm tomorrow
+   • Send an email to Alex saying the report is done
+   • Show my upcoming calendar events
+
+⚠️ You must log in once for me to access your Workspace tools!
+`);
+
+  ctx.replyWithMarkdownV2(message).catch(err =>
+    console.error('Error sending /start message:', err)
+  );
 });
 
 bot.on('text', async (ctx) => {
-  const response = await handleMessage(ctx.message.text, ctx);
-  ctx.reply(response);
+  try {
+    const userId = ctx.from.id.toString();
+    const tokens = await getUserTokens(userId);
+
+    if (!tokens) {
+      const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+      const loginUrl = `${baseUrl}/oauth?telegram_id=${userId}`;
+      const instruction = escapeMarkdownV2(`
+🔐 Before we start...
+
+Please [Login with Google](${loginUrl}) so I can help you manage:
+• Calendar & Meet
+• Gmail
+• Drive & Docs
+
+Steps:
+1. Click the link above
+2. Sign in with your Google account
+3. Grant access
+4. Come back and message me again!
+`);
+
+      await ctx.replyWithMarkdownV2(instruction);
+      return;
+    }
+
+    const userMessage = ctx.message.text;
+    const reply = await handleMessage(userMessage, userId, tokens);
+    await ctx.reply(reply);
+  } catch (err) {
+    console.error('Error handling message:', err);
+    await ctx.reply('⚠️ Something went wrong. Try again!');
+  }
 });
 
 module.exports = { bot };

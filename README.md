@@ -30,28 +30,6 @@ Athera is a smart Telegram bot that helps users manage their work through natura
 
 ---
 
-## 📂 Project Structure
-
-```
-athera-bot/
-├── .env                           # Environment variables
-├── index.js                       # Express server + webhook + OAuth
-├── telegram/bot.js                # Telegram bot logic
-├── firebase/firebase.js           # Firestore DB connection
-├── google/
-│   ├── auth.js                    # Google OAuth2 setup
-│   ├── calendar.js                # Calendar + Meet logic
-│   ├── gmail.js                   # Gmail read/send
-│   ├── drive.js                   # Drive access
-│   └── docs.js                    # Docs API to create notes
-├── nlu/
-│   └── handler.js                 # NodeNLP handler for user messages
-└── utils/
-    └── sessionStore.js           # Firestore-based session/token utils
-```
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
@@ -78,37 +56,6 @@ FIREBASE_PROJECT_ID=your_firebase_project_id
 FIREBASE_CLIENT_EMAIL=your_firebase_service_account_email
 FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n..."
 ```
-
----
-
-## 🔐 Google OAuth Setup
-
-1. Visit [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a project and enable APIs:
-   - **Gmail API**
-   - **Google Calendar API**
-   - **Google Drive API**
-   - **Google Docs API**
-3. Configure **OAuth Consent Screen**
-4. Add this redirect URI:  
-   `http://localhost:3000/oauth2callback`
-
----
-
-## 🔥 Firebase Setup
-
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a project and enable **Firestore**
-3. Go to **Project Settings → Service Accounts → Generate new private key**
-4. Copy the key data into `.env` file
-
----
-
-## 🤖 Telegram Bot Setup
-
-1. Talk to [@BotFather](https://t.me/botfather)
-2. Create a new bot and get the **Bot Token**
-3. Add the token to `.env` as `TELEGRAM_TOKEN`
 
 ---
 
