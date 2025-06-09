@@ -1,1 +1,1009 @@
-{"settings":{"languages":["en"],"tag":"nlp","threshold":0.5,"autoLoad":true,"autoSave":true,"modelFileName":"model.nlp","executeActionsBeforeAnswers":false,"calculateSentiment":true},"nluManager":{"settings":{"tag":"nlu-manager"},"locales":["en"],"languageNames":{},"domainManagers":{"en":{"settings":{"locale":"en","trainByDomain":false,"tag":"domain-manager-en","nluByDomain":{"default":{"className":"NeuralNlu","settings":{}}},"useStemDict":true},"stemDict":{"hello":{"intent":"greet","domain":"default"},"hi":{"intent":"greet","domain":"default"},"are,how,you":{"intent":"greet","domain":"default"},"thank,you":{"intent":"thanks","domain":"default"},"%note%,a,creat,note":{"intent":"create_note","domain":"default"},"%note%,a,make,note":{"intent":"create_note","domain":"default"},"%details%,a,meet,schedul":{"intent":"calendar_event","domain":"default"},"calendar,is,my,on,what":{"intent":"calendar_event","domain":"default"},"%email%,email,send,to":{"intent":"send_email","domain":"default"},"%email%,email":{"intent":"send_email","domain":"default"},"drive,file,my,show":{"intent":"list_drive","domain":"default"},"drive,file,list":{"intent":"list_drive","domain":"default"}},"intentDict":{"greet":"default","thanks":"default","create_note":"default","calendar_event":"default","send_email":"default","list_drive":"default"},"sentences":[{"domain":"default","utterance":"hello","intent":"greet"},{"domain":"default","utterance":"hi","intent":"greet"},{"domain":"default","utterance":"how are you","intent":"greet"},{"domain":"default","utterance":"thank you","intent":"thanks"},{"domain":"default","utterance":"create a note %note%","intent":"create_note"},{"domain":"default","utterance":"make a note %note%","intent":"create_note"},{"domain":"default","utterance":"schedule a meeting %details%","intent":"calendar_event"},{"domain":"default","utterance":"what is on my calendar","intent":"calendar_event"},{"domain":"default","utterance":"send email to %email%","intent":"send_email"},{"domain":"default","utterance":"email %email%","intent":"send_email"},{"domain":"default","utterance":"show my drive files","intent":"list_drive"},{"domain":"default","utterance":"list drive files","intent":"list_drive"}],"domains":{"master_domain":{"settings":{"locale":"en","tag":"nlu-en","keepStopwords":true,"nonefeatureValue":1,"nonedeltaMultiplier":1.2,"spellCheck":false,"spellCheckDistance":1,"filterZeros":true,"log":true},"features":{"hello":1,"hi":1,"how":1,"are":1,"you":1,"thank":1,"creat":1,"a":1,"note":1,"%note%":1,"make":1,"schedul":1,"meet":1,"%details%":1,"what":1,"is":1,"on":1,"my":1,"calendar":1,"send":1,"email":1,"to":1,"%email%":1,"show":1,"drive":1,"file":1,"list":1},"intents":{"greet":1,"thanks":1,"create_note":1,"calendar_event":1,"send_email":1,"list_drive":1},"intentFeatures":{"greet":{"hello":1,"hi":1,"how":1,"are":1,"you":1},"thanks":{"thank":1,"you":1},"create_note":{"creat":1,"a":1,"note":1,"%note%":1,"make":1},"calendar_event":{"schedul":1,"a":1,"meet":1,"%details%":1,"what":1,"is":1,"on":1,"my":1,"calendar":1},"send_email":{"send":1,"email":1,"to":1,"%email%":1},"list_drive":{"show":1,"my":1,"drive":1,"file":1,"list":1}},"featuresToIntent":{"hello":["greet"],"hi":["greet"],"how":["greet"],"are":["greet"],"you":["greet","thanks"],"thank":["thanks"],"creat":["create_note"],"a":["create_note","calendar_event"],"note":["create_note"],"%note%":["create_note"],"make":["create_note"],"schedul":["calendar_event"],"meet":["calendar_event"],"%details%":["calendar_event"],"what":["calendar_event"],"is":["calendar_event"],"on":["calendar_event"],"my":["calendar_event","list_drive"],"calendar":["calendar_event"],"send":["send_email"],"email":["send_email"],"to":["send_email"],"%email%":["send_email"],"show":["list_drive"],"drive":["list_drive"],"file":["list_drive"],"list":["list_drive"]},"neuralNetwork":{"settings":{"locale":"en","tag":"nlu-en","keepStopwords":true,"nonefeatureValue":1,"nonedeltaMultiplier":1.2,"spellCheck":false,"spellCheckDistance":1,"filterZeros":true,"log":true},"features":["hello","hi","how","are","you","thank","creat","a","note","%note%","make","schedul","meet","%details%","what","is","on","my","calendar","send","email","to","%email%","show","drive","file","list"],"intents":["greet","thanks","create_note","calendar_event","send_email","list_drive"],"perceptrons":[[8.904464721679688,8.921158790588379,4.622735977172852,4.622735977172852,-0.16515257954597473,-4.785301208496094,-0.6034653782844543,-2.1656014919281006,-1.1824629306793213,-1.1824629306793213,-0.5787134170532227,-0.980802059173584,-0.980802059173584,-0.980802059173584,-0.9251827597618103,-0.9251827597618103,-0.9251827597618103,-1.4091873168945312,-0.9251827597618103,-0.628319263458252,-2.515061140060425,-0.628319263458252,-2.515061140060425,-0.46432748436927795,-1.8548566102981567,-1.8548566102981567,-1.3708515167236328,5.113199733941314],[-0.8715758323669434,-0.8624968528747559,-2.964045763015747,-2.964045763015747,5.114367485046387,8.078702926635742,-0.13897906243801117,-0.46130263805389404,-0.26263949275016785,-0.26263949275016785,-0.10652466863393784,-0.19299045205116272,-0.19299045205116272,-0.19299045205116272,-0.18183399736881256,-0.18183399736881256,-0.18183399736881256,-0.3269546926021576,-0.18183399736881256,-0.1700410544872284,-0.4829505383968353,-0.1700410544872284,-0.4829505383968353,-0.12385885417461395,-0.3784123361110687,-0.3784123361110687,-0.23927563428878784,0.923612175940946],[-0.45615795254707336,-0.45331597328186035,-0.1631603240966797,-0.1631603240966797,-0.37530550360679626,-0.1889859437942505,2.1388604640960693,3.054697036743164,4.3083295822143555,4.3083295822143555,2.168846845626831,-1.1967835426330566,-1.1967835426330566,-1.1967835426330566,-0.15459662675857544,-0.15459662675857544,-0.15459662675857544,-0.29497700929641724,-0.15459662675857544,-0.1468801498413086,-0.3400438725948334,-0.1468801498413086,-0.3400438725948334,-0.09975200146436691,-0.28824228048324585,-0.28824228048324585,-0.15153491497039795,0.45881776875737984],[-0.7463193535804749,-0.7415235042572021,-0.2654467523097992,-0.2654467523097992,-0.6070700883865356,-0.31393077969551086,-0.6837596893310547,2.3806402683258057,-1.3330719470977783,-1.3330719470977783,-0.623405933380127,3.717985153198242,3.717985153198242,3.717985153198242,2.8989977836608887,2.8989977836608887,2.8989977836608887,1.9385180473327637,2.8989977836608887,-0.21727393567562103,-0.5525887608528137,-0.21727393567562103,-0.5525887608528137,-0.9171292781829834,-1.051802635192871,-1.051802635192871,-0.09558086097240448,0.7504592818936983],[-1.0483554601669312,-1.0390418767929077,-0.2950087785720825,-0.2950087785720825,-0.7147749066352844,-0.39004239439964294,-0.1570410579442978,-0.5598235130310059,-0.32947903871536255,-0.32947903871536255,-0.13467401266098022,-0.21083196997642517,-0.21083196997642517,-0.21083196997642517,-0.20435498654842377,-0.20435498654842377,-0.20435498654842377,-0.45582038164138794,-0.20435498654842377,0.3696030378341675,6.364805221557617,0.3696030378341675,6.364805221557617,-0.20367959141731262,-0.5149487853050232,-0.5149487853050232,-0.2624141275882721,1.117072393269886],[-0.7302096486091614,-0.7255369424819946,-0.2520604729652405,-0.2520604729652405,-0.5923550724983215,-0.29982003569602966,-0.1536385416984558,-0.5098763704299927,-0.3071989417076111,-0.3071989417076111,-0.11814514547586441,-0.17867204546928406,-0.17867204546928406,-0.17867204546928406,-0.6115389466285706,-0.6115389466285706,-0.6115389466285706,1.28607177734375,-0.6115389466285706,-0.1757223755121231,-0.4286283254623413,-0.1757223755121231,-0.4286283254623413,1.9494191408157349,5.162267208099365,5.162267208099365,3.212949275970459,0.7356919105778367]]}}}}},"intentDomains":{},"extraSentences":[["en","hello"],["en","hi"],["en","how are you"],["en","thank you"],["en","create a note %note%"],["en","make a note %note%"],["en","schedule a meeting %details%"],["en","what is on my calendar"],["en","send email to %email%"],["en","email %email%"],["en","show my drive files"],["en","list drive files"]]},"ner":{"settings":{"tag":"ner","entityPreffix":"%","entitySuffix":"%"},"rules":{}},"nlgManager":{"settings":{"tag":"nlg-manager"},"responses":{"en":{"greet":[{"answer":"Hey there! 😊 How can I assist you today?"}],"thanks":[{"answer":"You’re welcome! Let me know if you need anything else."}]}}},"actionManager":{"settings":{"tag":"action-manager"},"actions":{}},"slotManager":{"create_note":{"note":{"intent":"create_note","entity":"note","mandatory":false,"locales":{}}},"calendar_event":{"details":{"intent":"calendar_event","entity":"details","mandatory":false,"locales":{}}},"send_email":{"email":{"intent":"send_email","entity":"email","mandatory":false,"locales":{}}}}}
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greet",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greet",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "greet",
+            "domain": "default"
+          },
+          "thank,you": {
+            "intent": "thanks",
+            "domain": "default"
+          },
+          "%note%,a,creat,note": {
+            "intent": "create_note",
+            "domain": "default"
+          },
+          "%note%,a,make,note": {
+            "intent": "create_note",
+            "domain": "default"
+          },
+          "%details%,a,meet,schedul": {
+            "intent": "calendar_event",
+            "domain": "default"
+          },
+          "calendar,is,my,on,what": {
+            "intent": "calendar_event",
+            "domain": "default"
+          },
+          "%email%,email,send,to": {
+            "intent": "send_email",
+            "domain": "default"
+          },
+          "%email%,email": {
+            "intent": "send_email",
+            "domain": "default"
+          },
+          "drive,file,my,show": {
+            "intent": "list_drive",
+            "domain": "default"
+          },
+          "drive,file,list": {
+            "intent": "list_drive",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "about_bot",
+            "domain": "default"
+          },
+          "can,do,what,you": {
+            "intent": "about_bot",
+            "domain": "default"
+          },
+          "can,help,how,me,you": {
+            "intent": "about_bot",
+            "domain": "default"
+          },
+          "is,it,time,what": {
+            "intent": "time_now",
+            "domain": "default"
+          },
+          "day,is,today,what": {
+            "intent": "date_today",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greet": "default",
+          "thanks": "default",
+          "create_note": "default",
+          "calendar_event": "default",
+          "send_email": "default",
+          "list_drive": "default",
+          "about_bot": "default",
+          "time_now": "default",
+          "date_today": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you",
+            "intent": "greet"
+          },
+          {
+            "domain": "default",
+            "utterance": "thank you",
+            "intent": "thanks"
+          },
+          {
+            "domain": "default",
+            "utterance": "create a note %note%",
+            "intent": "create_note"
+          },
+          {
+            "domain": "default",
+            "utterance": "make a note %note%",
+            "intent": "create_note"
+          },
+          {
+            "domain": "default",
+            "utterance": "schedule a meeting %details%",
+            "intent": "calendar_event"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is on my calendar",
+            "intent": "calendar_event"
+          },
+          {
+            "domain": "default",
+            "utterance": "send email to %email%",
+            "intent": "send_email"
+          },
+          {
+            "domain": "default",
+            "utterance": "email %email%",
+            "intent": "send_email"
+          },
+          {
+            "domain": "default",
+            "utterance": "show my drive files",
+            "intent": "list_drive"
+          },
+          {
+            "domain": "default",
+            "utterance": "list drive files",
+            "intent": "list_drive"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you",
+            "intent": "about_bot"
+          },
+          {
+            "domain": "default",
+            "utterance": "what can you do",
+            "intent": "about_bot"
+          },
+          {
+            "domain": "default",
+            "utterance": "how can you help me",
+            "intent": "about_bot"
+          },
+          {
+            "domain": "default",
+            "utterance": "what time is it",
+            "intent": "time_now"
+          },
+          {
+            "domain": "default",
+            "utterance": "what day is today",
+            "intent": "date_today"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "how": 1,
+              "are": 1,
+              "you": 1,
+              "thank": 1,
+              "creat": 1,
+              "a": 1,
+              "note": 1,
+              "%note%": 1,
+              "make": 1,
+              "schedul": 1,
+              "meet": 1,
+              "%details%": 1,
+              "what": 1,
+              "is": 1,
+              "on": 1,
+              "my": 1,
+              "calendar": 1,
+              "send": 1,
+              "email": 1,
+              "to": 1,
+              "%email%": 1,
+              "show": 1,
+              "drive": 1,
+              "file": 1,
+              "list": 1,
+              "who": 1,
+              "can": 1,
+              "do": 1,
+              "help": 1,
+              "me": 1,
+              "time": 1,
+              "it": 1,
+              "day": 1,
+              "today": 1
+            },
+            "intents": {
+              "greet": 1,
+              "thanks": 1,
+              "create_note": 1,
+              "calendar_event": 1,
+              "send_email": 1,
+              "list_drive": 1,
+              "about_bot": 1,
+              "time_now": 1,
+              "date_today": 1
+            },
+            "intentFeatures": {
+              "greet": {
+                "hello": 1,
+                "hi": 1,
+                "how": 1,
+                "are": 1,
+                "you": 1
+              },
+              "thanks": {
+                "thank": 1,
+                "you": 1
+              },
+              "create_note": {
+                "creat": 1,
+                "a": 1,
+                "note": 1,
+                "%note%": 1,
+                "make": 1
+              },
+              "calendar_event": {
+                "schedul": 1,
+                "a": 1,
+                "meet": 1,
+                "%details%": 1,
+                "what": 1,
+                "is": 1,
+                "on": 1,
+                "my": 1,
+                "calendar": 1
+              },
+              "send_email": {
+                "send": 1,
+                "email": 1,
+                "to": 1,
+                "%email%": 1
+              },
+              "list_drive": {
+                "show": 1,
+                "my": 1,
+                "drive": 1,
+                "file": 1,
+                "list": 1
+              },
+              "about_bot": {
+                "who": 1,
+                "are": 1,
+                "you": 1,
+                "what": 1,
+                "can": 1,
+                "do": 1,
+                "how": 1,
+                "help": 1,
+                "me": 1
+              },
+              "time_now": {
+                "what": 1,
+                "time": 1,
+                "is": 1,
+                "it": 1
+              },
+              "date_today": {
+                "what": 1,
+                "day": 1,
+                "is": 1,
+                "today": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greet"
+              ],
+              "hi": [
+                "greet"
+              ],
+              "how": [
+                "greet",
+                "about_bot"
+              ],
+              "are": [
+                "greet",
+                "about_bot"
+              ],
+              "you": [
+                "greet",
+                "thanks",
+                "about_bot"
+              ],
+              "thank": [
+                "thanks"
+              ],
+              "creat": [
+                "create_note"
+              ],
+              "a": [
+                "create_note",
+                "calendar_event"
+              ],
+              "note": [
+                "create_note"
+              ],
+              "%note%": [
+                "create_note"
+              ],
+              "make": [
+                "create_note"
+              ],
+              "schedul": [
+                "calendar_event"
+              ],
+              "meet": [
+                "calendar_event"
+              ],
+              "%details%": [
+                "calendar_event"
+              ],
+              "what": [
+                "calendar_event",
+                "about_bot",
+                "time_now",
+                "date_today"
+              ],
+              "is": [
+                "calendar_event",
+                "time_now",
+                "date_today"
+              ],
+              "on": [
+                "calendar_event"
+              ],
+              "my": [
+                "calendar_event",
+                "list_drive"
+              ],
+              "calendar": [
+                "calendar_event"
+              ],
+              "send": [
+                "send_email"
+              ],
+              "email": [
+                "send_email"
+              ],
+              "to": [
+                "send_email"
+              ],
+              "%email%": [
+                "send_email"
+              ],
+              "show": [
+                "list_drive"
+              ],
+              "drive": [
+                "list_drive"
+              ],
+              "file": [
+                "list_drive"
+              ],
+              "list": [
+                "list_drive"
+              ],
+              "who": [
+                "about_bot"
+              ],
+              "can": [
+                "about_bot"
+              ],
+              "do": [
+                "about_bot"
+              ],
+              "help": [
+                "about_bot"
+              ],
+              "me": [
+                "about_bot"
+              ],
+              "time": [
+                "time_now"
+              ],
+              "it": [
+                "time_now"
+              ],
+              "day": [
+                "date_today"
+              ],
+              "today": [
+                "date_today"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "how",
+                "are",
+                "you",
+                "thank",
+                "creat",
+                "a",
+                "note",
+                "%note%",
+                "make",
+                "schedul",
+                "meet",
+                "%details%",
+                "what",
+                "is",
+                "on",
+                "my",
+                "calendar",
+                "send",
+                "email",
+                "to",
+                "%email%",
+                "show",
+                "drive",
+                "file",
+                "list",
+                "who",
+                "can",
+                "do",
+                "help",
+                "me",
+                "time",
+                "it",
+                "day",
+                "today"
+              ],
+              "intents": [
+                "greet",
+                "thanks",
+                "create_note",
+                "calendar_event",
+                "send_email",
+                "list_drive",
+                "about_bot",
+                "time_now",
+                "date_today"
+              ],
+              "perceptrons": [
+                [
+                  9.509366989135742,
+                  9.513021469116211,
+                  7.168471336364746,
+                  4.005936145782471,
+                  -2.1101431846618652,
+                  -2.6105892658233643,
+                  -0.5515430569648743,
+                  -1.9880176782608032,
+                  -1.0858832597732544,
+                  -1.0858832597732544,
+                  -0.5340103507041931,
+                  -0.9014446139335632,
+                  -0.9014446139335632,
+                  -0.9014446139335632,
+                  -1.956346869468689,
+                  -1.5253098011016846,
+                  -0.3286729156970978,
+                  -0.859296441078186,
+                  -0.3286729156970978,
+                  -0.557750940322876,
+                  -2.3323044776916504,
+                  -0.557750940322876,
+                  -2.3323044776916504,
+                  -0.5161454081535339,
+                  -1.7345046997070312,
+                  -1.7345046997070312,
+                  -1.214632272720337,
+                  -6.215506076812744,
+                  -3.4932732582092285,
+                  -0.3898686468601227,
+                  -3.062237024307251,
+                  -3.062237024307251,
+                  -0.5920165181159973,
+                  -0.5920165181159973,
+                  -0.5893628597259521,
+                  -0.5893628597259521,
+                  4.668379551223743
+                ],
+                [
+                  -0.7277648448944092,
+                  -0.7218652367591858,
+                  -1.8256756067276,
+                  -3.0810258388519287,
+                  4.177465915679932,
+                  9.248371124267578,
+                  -0.10023704916238785,
+                  -0.36262592673301697,
+                  -0.20062337815761566,
+                  -0.20062337815761566,
+                  -0.0849418118596077,
+                  -0.1595550924539566,
+                  -0.1595550924539566,
+                  -0.1595550924539566,
+                  -1.5192798376083374,
+                  -0.10125608742237091,
+                  -0.06790214776992798,
+                  -0.19679595530033112,
+                  -0.06790214776992798,
+                  -0.12483326345682144,
+                  -0.4062058925628662,
+                  -0.12483326345682144,
+                  -0.4062058925628662,
+                  -0.11115801334381104,
+                  -0.31617775559425354,
+                  -0.31617775559425354,
+                  -0.19829502701759338,
+                  -1.842159390449524,
+                  -1.9977723360061646,
+                  -1.4081774950027466,
+                  -0.5886102914810181,
+                  -0.5886102914810181,
+                  -0.012135723605751991,
+                  -0.012135723605751991,
+                  -0.004934894386678934,
+                  -0.004934894386678934,
+                  0.7597770112882439
+                ],
+                [
+                  -0.42160260677337646,
+                  -0.4200436770915985,
+                  -0.13018706440925598,
+                  -0.18263955414295197,
+                  -0.4673028886318207,
+                  -0.10233525186777115,
+                  2.1500725746154785,
+                  3.0712547302246094,
+                  4.316608905792236,
+                  4.316608905792236,
+                  2.1662192344665527,
+                  -1.1879363059997559,
+                  -1.1879363059997559,
+                  -1.1879363059997559,
+                  -0.36363399028778076,
+                  -0.2838040590286255,
+                  -0.09826982766389847,
+                  -0.22732999920845032,
+                  -0.09826982766389847,
+                  -0.1383993923664093,
+                  -0.3189801275730133,
+                  -0.1383993923664093,
+                  -0.3189801275730133,
+                  -0.09641370177268982,
+                  -0.27302196621894836,
+                  -0.27302196621894836,
+                  -0.14152003824710846,
+                  -0.11674583703279495,
+                  -0.14885683357715607,
+                  -0.06255333870649338,
+                  -0.06576041132211685,
+                  -0.06576041132211685,
+                  -0.07679063826799393,
+                  -0.07679063826799393,
+                  -0.06232789531350136,
+                  -0.06232789531350136,
+                  0.42224536723223155
+                ],
+                [
+                  -0.3946085274219513,
+                  -0.39318251609802246,
+                  -0.05922926962375641,
+                  -0.15278950333595276,
+                  -0.723584771156311,
+                  -0.021668175235390663,
+                  -0.6274008750915527,
+                  2.5392749309539795,
+                  -1.2375972270965576,
+                  -1.2375972270965576,
+                  -0.5798205137252808,
+                  3.7838199138641357,
+                  3.7838199138641357,
+                  3.7838199138641357,
+                  0.9410920739173889,
+                  1.4270046949386597,
+                  4.2119364738464355,
+                  3.098846673965454,
+                  4.2119364738464355,
+                  -0.17304956912994385,
+                  -0.40597108006477356,
+                  -0.17304956912994385,
+                  -0.40597108006477356,
+                  -1.1043200492858887,
+                  -1.202619194984436,
+                  -1.202619194984436,
+                  -0.07544608414173126,
+                  -0.13339735567569733,
+                  -0.5109086036682129,
+                  -0.45006629824638367,
+                  -0.036208733916282654,
+                  -0.036208733916282654,
+                  -1.3907452821731567,
+                  -1.3907452821731567,
+                  -1.387426495552063,
+                  -1.387426495552063,
+                  0.3948391895863507
+                ],
+                [
+                  -1.0242304801940918,
+                  -1.0179435014724731,
+                  -0.21515032649040222,
+                  -0.30994099378585815,
+                  -0.8311070203781128,
+                  -0.23115456104278564,
+                  -0.15890850126743317,
+                  -0.5247654914855957,
+                  -0.3058313727378845,
+                  -0.3058313727378845,
+                  -0.12184053659439087,
+                  -0.2067582905292511,
+                  -0.2067582905292511,
+                  -0.2067582905292511,
+                  -0.5477824807167053,
+                  -0.40926551818847656,
+                  -0.03560854494571686,
+                  -0.27514660358428955,
+                  -0.03560854494571686,
+                  0.2397814244031906,
+                  6.466576099395752,
+                  0.2397814244031906,
+                  6.466576099395752,
+                  -0.219931498169899,
+                  -0.49072813987731934,
+                  -0.49072813987731934,
+                  -0.24088409543037415,
+                  -0.20740847289562225,
+                  -0.25324657559394836,
+                  -0.10272550582885742,
+                  -0.11507871001958847,
+                  -0.11507871001958847,
+                  -0.17805160582065582,
+                  -0.17805160582065582,
+                  -0.15290383994579315,
+                  -0.15290383994579315,
+                  1.0679005256482874
+                ],
+                [
+                  -0.6836298704147339,
+                  -0.6809908747673035,
+                  -0.20285747945308685,
+                  -0.2868998050689697,
+                  -0.7291486859321594,
+                  -0.16101473569869995,
+                  -0.13788586854934692,
+                  -0.46568262577056885,
+                  -0.2775411605834961,
+                  -0.2775411605834961,
+                  -0.10630079358816147,
+                  -0.16315802931785583,
+                  -0.16315802931785583,
+                  -0.16315802931785583,
+                  -0.8754367828369141,
+                  -0.7406020760536194,
+                  -0.4421299993991852,
+                  1.3987807035446167,
+                  -0.4421299993991852,
+                  -0.16278500854969025,
+                  -0.4037228524684906,
+                  -0.16278500854969025,
+                  -0.4037228524684906,
+                  1.8858283758163452,
+                  5.160200119018555,
+                  5.160200119018555,
+                  3.274430274963379,
+                  -0.17678630352020264,
+                  -0.23261243104934692,
+                  -0.10279733687639236,
+                  -0.0957120880484581,
+                  -0.0957120880484581,
+                  -0.11558645218610764,
+                  -0.11558645218610764,
+                  -0.11630679666996002,
+                  -0.11630679666996002,
+                  0.6852738351582868
+                ],
+                [
+                  -0.5109740495681763,
+                  -0.5029579401016235,
+                  -4.242627143859863,
+                  0.8898507356643677,
+                  3.623748302459717,
+                  -3.8186099529266357,
+                  -0.08839261531829834,
+                  -0.28267598152160645,
+                  -0.17127841711044312,
+                  -0.17127841711044312,
+                  -0.05370238795876503,
+                  -0.08435674756765366,
+                  -0.08435674756765366,
+                  -0.08435674756765366,
+                  1.3160799741744995,
+                  -1.2744396924972534,
+                  -0.20714688301086426,
+                  -0.299498975276947,
+                  -0.20714688301086426,
+                  -0.08690284192562103,
+                  -0.22311179339885712,
+                  -0.08690284192562103,
+                  -0.22311179339885712,
+                  -0.06180862709879875,
+                  -0.17437238991260529,
+                  -0.17437238991260529,
+                  -0.09431928396224976,
+                  9.073291778564453,
+                  6.5490593910217285,
+                  2.596428632736206,
+                  3.9504997730255127,
+                  3.9504997730255127,
+                  -0.5050784349441528,
+                  -0.5050784349441528,
+                  -0.48351535201072693,
+                  -0.48351535201072693,
+                  0.3003999305870769
+                ],
+                [
+                  -0.2398855835199356,
+                  -0.23898878693580627,
+                  -0.05771571770310402,
+                  -0.0773882120847702,
+                  -0.6891835927963257,
+                  -0.05465121194720268,
+                  -0.05460243672132492,
+                  -0.18352730572223663,
+                  -0.1116078794002533,
+                  -0.1116078794002533,
+                  -0.04211609438061714,
+                  -0.06167001649737358,
+                  -0.06167001649737358,
+                  -0.06167001649737358,
+                  1.5176392793655396,
+                  2.0556137561798096,
+                  -1.267363429069519,
+                  -1.283744215965271,
+                  -1.267363429069519,
+                  -0.04224851727485657,
+                  -0.12460438907146454,
+                  -0.04224851727485657,
+                  -0.12460438907146454,
+                  -0.008475893177092075,
+                  -0.08972276002168655,
+                  -0.08972276002168655,
+                  -0.07336585968732834,
+                  -0.013033168390393257,
+                  -0.5372763276100159,
+                  -0.5365656018257141,
+                  -0.0003888714127242565,
+                  -0.0003888714127242565,
+                  5.235952377319336,
+                  5.235952377319336,
+                  -1.9067680835723877,
+                  -1.9067680835723877,
+                  0.24032306172617077
+                ],
+                [
+                  -0.22315789759159088,
+                  -0.21969342231750488,
+                  -0.07063009589910507,
+                  -0.09447874128818512,
+                  -0.7147557735443115,
+                  -0.06465817242860794,
+                  -0.0639016255736351,
+                  -0.21457698941230774,
+                  -0.1307983696460724,
+                  -0.1307983696460724,
+                  -0.0493067242205143,
+                  -0.07158830761909485,
+                  -0.07158830761909485,
+                  -0.07158830761909485,
+                  1.5257691144943237,
+                  2.0602540969848633,
+                  -1.272844672203064,
+                  -1.2990657091140747,
+                  -1.272844672203064,
+                  -0.052468203008174896,
+                  -0.1334763616323471,
+                  -0.052468203008174896,
+                  -0.1334763616323471,
+                  -0.01924293301999569,
+                  -0.097379669547081,
+                  -0.097379669547081,
+                  -0.07105875760316849,
+                  -0.01781875640153885,
+                  -0.5304378867149353,
+                  -0.5263575315475464,
+                  -0.002110830508172512,
+                  -0.002110830508172512,
+                  -1.899859070777893,
+                  -1.899859070777893,
+                  5.242708683013916,
+                  5.242708683013916,
+                  0.21402443228153015
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "how are you"
+      ],
+      [
+        "en",
+        "thank you"
+      ],
+      [
+        "en",
+        "create a note %note%"
+      ],
+      [
+        "en",
+        "make a note %note%"
+      ],
+      [
+        "en",
+        "schedule a meeting %details%"
+      ],
+      [
+        "en",
+        "what is on my calendar"
+      ],
+      [
+        "en",
+        "send email to %email%"
+      ],
+      [
+        "en",
+        "email %email%"
+      ],
+      [
+        "en",
+        "show my drive files"
+      ],
+      [
+        "en",
+        "list drive files"
+      ],
+      [
+        "en",
+        "who are you"
+      ],
+      [
+        "en",
+        "what can you do"
+      ],
+      [
+        "en",
+        "how can you help me"
+      ],
+      [
+        "en",
+        "what time is it"
+      ],
+      [
+        "en",
+        "what day is today"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greet": [
+          {
+            "answer": "Hey there! 😊 How can I assist you today?"
+          }
+        ],
+        "thanks": [
+          {
+            "answer": "You’re welcome! Let me know if you need anything else."
+          }
+        ],
+        "about_bot": [
+          {
+            "answer": "🤖 I’m Athera, your smart assistant! I can help with emails, meetings, notes, files, and more."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "create_note": {
+      "note": {
+        "intent": "create_note",
+        "entity": "note",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "calendar_event": {
+      "details": {
+        "intent": "calendar_event",
+        "entity": "details",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "send_email": {
+      "email": {
+        "intent": "send_email",
+        "entity": "email",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  }
+}
